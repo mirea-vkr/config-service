@@ -18,7 +18,7 @@ spring:
   redis:
     host: localhost  # Используем контейнер redis
     port: 6379
-    password: "nikitalaguT03"
+#    password: "nikitalaguT03"
 
 jwt:
   secret: "kYpN5+MWfjZqYnmA19qzWkN528TY3KhCCMgg8SAZyT4="
