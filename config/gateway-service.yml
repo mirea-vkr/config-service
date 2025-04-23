@@ -38,6 +38,10 @@ spring:
           uri: lb://review-service
           predicates:
             - Path=/api/v1/reviews/**
+        - id: recommendation-service
+          uri: lb://recommendation-service
+          predicates:
+            - Path=/api/v1/recommendations/**
 
 
 
