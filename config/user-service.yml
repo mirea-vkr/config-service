@@ -3,9 +3,24 @@ server:
 
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/userdb
-    username: user
-    password: pass
+    url: jdbc:postgresql://postgres:5432/user_db  # Используем контейнер postgres
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
       ddl-auto: update
+    show-sql: true
+  security:
+    user:
+      name: user
+      password: password
+  redis:
+    host: redis  # Используем контейнер redis
+    port: 6379
+#    password: "nikitalaguT03"
+
+jwt:
+  secret: "kYpN5+MWfjZqYnmA19qzWkN528TY3KhCCMgg8SAZyT4="
+  access-token-expiration: 3600000   # 1 час
+  refresh-token-expiration: 604800000 # 7 дней
